@@ -134,6 +134,8 @@ body{
 .wrapper{
 	width: 100%;
 	padding: 0 15px;
+	max-width: 1024px;
+	margin: 0 auto;
 }
 .logo{
 	display: block;
@@ -270,10 +272,13 @@ form:before{
 
 .top_section{
 	position: relative;
+	overflow: hidden;
 }
 
 /* top section left collumn styles */
-
+#left_coll{
+	z-index: 1000;
+}
 .left_coll{
 	display: inline-block;
 	position: relative;
@@ -329,13 +334,20 @@ form:before{
 
 /* right coll styles */ 
 
+#right_coll{
+	z-index: 1;
+}
 .right_coll{
 	display: inline-block;
 	position: relative;
 	float: right;
 	width: 30%;
+	height: 100%;
 	padding: 40px;
 	background: #fff;
+	margin: 0 0 -4000px;
+	padding: 40px 40px 4000px;
+	overflow: hidden;
 }
 .form_row{
 	display: inline-block;
@@ -439,4 +451,162 @@ option{
 	font-size: 0.8rem;
 	width: 70%;
 	text-align: left;
+}
+
+/* foom finder button */
+
+#room_finder{
+	z-index: 1;
+}
+.room_finder_container{
+	display: inline-block;
+	position: absolute;
+	width: 30%;
+    height: 60px;
+    bottom: 0;
+    right:0;
+}
+.room_finder{
+	display: block;
+	position: relative;
+	height: 100%;
+    color:#fff;
+    text-align: center;
+    padding: 20px;
+    font-size: 18px;
+    line-height: 20px;
+    background: #51b4db;
+    -webkit-box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.1);
+    box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.1);
+    background-image: -webkit-linear-gradient(top, #53b9e0, #4fb1d7);
+}
+.room_finder:hover{
+	box-shadow: inset 0 3px 15px rgba(0, 0, 0, 0.3);
+	color:#fff;
+}
+.fa.search_button{
+	display: inline-block;
+	position: static;
+	line-height: 0px;
+	color: #fff;
+}
+.room_finder p{
+	display: inline-block;
+}
+
+/* main content section */
+
+.middle_section{
+	margin-top: 15px;
+	min-height: 600px;
+}
+.content{
+	display: flex;
+	justify-content: space-between;
+	width: 70%;
+	position: relative;
+	float: left;
+	outline: 1px solid green;
+}
+.toor1, .toor2{
+	width: 48%;
+}
+.toor_content{
+	padding: 30px;
+	background: #ffffff;
+    color: #5c626b;
+    box-shadow: 0 1px 3px rgba(30, 50, 70, 0.3);
+}
+.teaser{
+	margin: -30px -30px 15px -30px;
+	position: relative;
+}
+.teaser img{
+	max-width: 100%;
+    height: auto;
+    box-sizing: border-box;
+}
+.toor_content h2{
+	font-family: ;
+}
+.toor_content hr{
+	margin: 15px 0 15px 0;
+}
+.toor_content p{
+	margin-bottom: 30px;
+	line-height: 1.4rem;
+}
+
+/* toor icons styles */
+
+.rate{
+	vertical-align: middle;
+}
+.rate span{
+	
+}
+.fa-icon-star{
+	width: 15px;
+	height: 15px;
+	font-family: FontAwesome;
+    display: inline-block;
+    font-weight: normal;
+    font-style: normal;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.fa-icon-star:before{
+	content: "\f005";
+}
+.icon-color{
+	color: #da8668; 
+}
+.icon-color-muted{
+	color: #c6ccd2;
+}
+.fa-icon-credit-card, .fa-icon-cultury, .fa-icon-desctop{
+	width: 20px;
+	height: 20px;
+	margin-left: 4px;
+}
+.fa-icon-credit-card:before{
+	content: "\f09d";
+}
+.fa-icon-cultury:before{
+	content: "\f0f5";
+}
+.fa-icon-desctop:before{
+	content: "\f108";
+}
+/* prise block styles */
+.prise{
+	outline: 1px solid green; 
+	display: flex;
+	flex-direction: row;
+}
+.prise h2,.prise span,.prise a{
+	display: inline-block;
+	float: left;
+	margin: auto 0;
+}
+.prise span{
+	
+}
+.prise a{
+	padding: 0 10px;
+	color: #ffffff;
+    text-transform: none;
+    box-sizing: border-box;
+    background: #51b4db;
+    vertical-align: middle;
+    line-height: 30px;
+    min-height: 30px;
+    font-size: 1rem;
+    text-decoration: none;
+    text-align: center;
+    background-image: -webkit-linear-gradient(top, #53b9e0, #4fb1d7);
+    background-image: linear-gradient(to bottom, #53b9e0, #4fb1d7);
+    border-radius: 2px;
+    cursor: pointer;
 }
