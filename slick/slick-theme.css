@@ -119,8 +119,7 @@
   /*  margin-bottom: 30px;*/
 }
 
-.slick-dots
-{
+.slick-dots{
     position: absolute;
     top: 25px;
     left: 25px;

@@ -98,6 +98,15 @@ h3{
 	transition: 0.5 ease;
 	color: #497c95;
 }
+h4{
+	font-size: 0.8rem;
+	line-height: 1.1rem;
+	font-family: 'News_Cycle_regular', sans-serif;
+	-webkit-transition: 0.5 ease;
+	-o-transition: 0.5 ease;
+	transition: 0.5 ease;
+	color: #497c95;
+}
 p{	
 	font-size: 1rem;
 	line-height: 1.2rem;
@@ -112,8 +121,8 @@ p{
 }
 .clearfix:after {clear: both;}
 
-.left {float:left;}
-.right {float:right;}
+.left {display: inline-block; float:left;}
+.right {display: inline-block; float:right;}
 .text-right {text-align: right;}
 .text-center {text-align: center;}
 
@@ -494,16 +503,16 @@ option{
 	display: inline-block;
 }
 
-/* main content section */
+/* grid of the "main content" section */
 
-.middle_section{
+.middle_section, .bottom_section{
 	margin-top: 15px;
 	min-height: 600px;
 }
 .content{
 	display: flex;
 	justify-content: space-between;
-	width: 70%;
+	width: 69%;
 	position: relative;
 	float: left;
 	outline: 1px solid green;
@@ -511,6 +520,8 @@ option{
 .toor1, .toor2{
 	width: 48%;
 }
+
+/* toor block styles */
 .toor_content{
 	padding: 30px;
 	background: #ffffff;
@@ -579,11 +590,15 @@ option{
 .fa-icon-desctop:before{
 	content: "\f108";
 }
+
 /* prise block styles */
+
 .prise{
-	outline: 1px solid green; 
-	display: flex;
-	flex-direction: row;
+	position: relative;
+	height: 48px;
+}
+.prise h2{
+	color: #da8668;
 }
 .prise h2,.prise span,.prise a{
 	display: inline-block;
@@ -591,9 +606,16 @@ option{
 	margin: auto 0;
 }
 .prise span{
-	
+	position: absolute;
+    top: 50%;
+    transform: translateY(-45%);
+    margin-left: 4px;
 }
 .prise a{
+	float: right;
+	position: relative;
+	top: 50%;
+    transform: translateY(-50%);
 	padding: 0 10px;
 	color: #ffffff;
     text-transform: none;
@@ -610,3 +632,182 @@ option{
     border-radius: 2px;
     cursor: pointer;
 }
+
+/* bottom content section styles */ 
+
+.content:nth-child(2){
+	margin-top: 15px;
+}
+.toor_image{
+	position: relative;
+}
+.toor_image img{
+    max-width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    box-shadow: 0 1px 3px rgba(30, 50, 70, 0.3), inset 0 0 1px rgba(255, 255, 255, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.12);
+}
+.signUp{
+	text-align: center !important;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    background-image: url(../img/panel-box-noise-bg.png);
+    box-shadow: 0 1px 3px rgba(30, 50, 70, 0.3), inset 0 0 1px rgba(255, 255, 255, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.12);
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    margin-top: 15px;
+    position: relative;
+  }
+.signUp h3{
+	color:#fff;
+	line-height: 1.6rem;
+}
+.signUp span{
+	display: block;
+	font-size: 0.7rem;
+	margin-bottom: 18px;
+}
+.signUp_addres, .signUp_addres_submit{
+	display: inline-block;
+	height: 30px;
+	border-radius: 2px; 
+	-webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+    -webkit-transition: all 0.2s linear;
+    -webkit-transition-property: border, background, color, box-shadow, padding;
+    transition: all 0.2s linear;
+    transition-property: border, background, color, box-shadow, padding;
+    font-weight: 300;
+}
+.signUp_addres{
+	border-color: rgba(255, 255, 255, 0.15);
+    background: rgba(45, 55, 70, 0.15);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.1);
+    color: #ffffff;
+    max-width: 100%;
+    padding: 4px 6px;
+    color: #5c626b;
+    width: 60%;    
+}
+.signUp_addres:focus{
+	 border: 1px solid #e5e5e5;
+	 color: #fff;
+}
+.signUp_addres_submit{
+	max-width: 40%;
+	border: 1px solid transparent;
+	background-color: #de8a6c;
+    color: #ffffff;
+    padding: 0 12px;
+   	line-height: 30px;
+    font-size: 0.8rem;
+    text-decoration: none;
+}
+.signUp_addres_submit:active{
+	box-shadow: inset 2px 3px 3px 3px rgba(0, 0, 0, 0.1);
+	border: 1px solid #fff;
+	padding: 0 11px;
+}
+
+			/* best deals block */
+
+.favorite{
+	display: none;
+	position: absolute;
+}
+.toor_content h4{
+	font-size: 1rem;
+	margin-bottom: 15px;
+}
+.deal{
+	position: relative;
+	margin-bottom: 15px;
+}
+.deal:last-child{
+	margin-bottom: 2px;
+}
+
+			/* best offer left side */
+
+.deal .left{
+	box-sizing: border-box;
+    margin: 0;
+    padding: 4px;
+    border: 1px solid #e5e5e5;
+    max-width: 48%;
+    height: auto;
+}
+.deal .left img{
+	max-width: 100%;
+}
+
+			/* best offer right side */
+
+.deal .right{
+	width: 50%;
+}
+.deal .right h4{
+	margin-bottom: 0;
+}
+.deal_prise{
+	margin-top: 15px;
+}
+.deal_prise a{
+	color: #da8668;
+	font-size: 1.1rem;
+}
+.deal_prise span{
+	color: #a8aeb6;
+}
+
+/* side bar styles */
+
+aside{
+	width: 30%;
+	display: inline-block;
+	float: right;
+	min-height: 1000px;
+	outline: 1px solid yellow; 
+}
+
+/* footer styles */
+
+footer{
+    position: relative;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.1);
+    background-image: url(../img/panel-box-noise-bg.png);
+    box-shadow: 0 1px 3px rgba(30, 50, 70, 0.3), inset 0 0 1px rgba(255, 255, 255, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.12);
+    color: #ffffff;
+    text-align: center;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+footer a{
+	color: #68c1e3;
+}
+.footer_menu{
+	display: block;
+}
+.footer_menu li{
+	display: inline-block;
+	padding: 10px;
+	font-size: 14px;
+	line-height: 34px;
+}
+.vertical_devider:before{
+	content: '';
+	margin-right: 10px;
+    border-left: 1px solid #e5e5e5;
+	border-left-color: rgba(0, 0, 0, 0.1);
+    box-shadow: 1px 0 0 rgba(255, 255, 255);
+}
+footer p{
+	margin-bottom: 15px;
+
+}
+
+   
