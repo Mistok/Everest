@@ -520,7 +520,7 @@ option{
 	width: 69%;
 	position: relative;
 	float: left;
-	outline: 1px solid green;
+	/*outline: 1px solid green;*/
 }
 .toor1, .toor2{
 	width: 48%;
@@ -534,7 +534,7 @@ aside{
 	width: 30%;
 	float: right;
 	min-height: 978px;
-	outline: 1px solid yellow; 
+	/*outline: 1px solid yellow; */
 }
 
 /* sidebar navigation */
