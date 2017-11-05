@@ -138,7 +138,8 @@ p{
 
 /* main css */
 body{
-	background-color: #678ca6;
+	background: #678ca6 url(../img/default_bg.jpg) 50% 0 fixed;
+    background-size: cover;
 }
 .wrapper{
 	width: 100%;
@@ -169,14 +170,19 @@ body{
     box-shadow: 0 1px 3px rgba(30, 50, 70, 0.3), inset 0 0 1px rgba(255, 255, 255, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.12);
 }
 .main_menu ul{
-	display: inline-block;
+	display: flex;
+	flex-direction: row;
+	justify-content: left;
 	float: left;
 }
 .menu_item{
 	position: relative;
-	display: inline-block;
+	/*display: inline-block;*/
 	height: 100%;
 	text-align: center;
+	box-sizing: border-box;
+	margin-left: 2px;
+	 border-right: 1px solid rgba(0, 0, 0, 0.3) !important;
 }
 .menu_item a{
 	display: block;
@@ -189,11 +195,10 @@ body{
     line-height: 90px;
     color: #ffffff;
     font-size: 14px;
-    font-family: 'robot_regular' sans-serif;
     font-weight: 300;
-    border-right: 1px solid rgba(0, 0, 0, 0.1);
+   
 	transform: rotate(0);
- 	  -webkit-box-shadow: 1px 0 0 rgba(255, 255, 255, 0.12);
+ 	-webkit-box-shadow: 1px 0 0 rgba(255, 255, 255, 0.12);
     box-shadow: 1px 0 0 rgba(255, 255, 255, 0.12);
 
     -webkit-text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
@@ -462,7 +467,7 @@ option{
 	text-align: left;
 }
 
-/* foom finder button */
+/* room finder button */
 
 #room_finder{
 	z-index: 1;
@@ -521,7 +526,188 @@ option{
 	width: 48%;
 }
 
-/* toor block styles */
+/* sidebar styles */
+
+aside{
+	display: inline-block;
+	position: relative;
+	width: 30%;
+	float: right;
+	min-height: 978px;
+	outline: 1px solid yellow; 
+}
+
+/* sidebar navigation */
+
+.side_nav{
+	width: 100%;
+	text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+.side_nav li{
+	display: inline-block;
+	width: 100%;
+	line-height: 24px;
+	margin-bottom: 1px;
+	background-color: rgba(255, 255, 255, 0.1);
+    background-image: url(../img/panel-box-noise-bg.png);
+    box-shadow: 0 1px 3px rgba(30, 50, 70, 0.3), inset 0 0 1px rgba(255, 255, 255, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.12);
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+.side_nav a{
+	padding: 10px 15px;
+	cursor: pointer;
+	display: block;
+	line-height: 24px;
+	color: #fff;
+}
+.side_nav li:hover{
+	background-color: #7695ac;
+	background-image: url(../img/panel-box-noise-bg.png);
+}
+.side_nav .fa{
+	color: #fff;
+	margin-right: 20px;
+	font-size: 1rem;
+	line-height: 100%;
+}
+.fa-icon-plane:before{
+	content:"\f072";
+}
+.fa-icon-phone:before{
+	content: "\f095";
+}
+.fa-icon-check:before{
+	content: "\f00c";
+}
+.fa-icon-glass:before{
+	content: "\f000";
+}
+.fa-icon-info-circle:before{
+	content: "\f05a";
+}
+
+/* sidebar social links */
+
+.social{
+	margin-top: 15px;
+}
+.social a{
+	display: inline-block;
+	height: 110px;
+	width: 48%;
+	padding: 30px;
+	line-height: 50px;
+    font-size: 50px; 
+	color: #ffffff;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    box-shadow: 0 1px 3px rgba(30, 50, 70, 0.3);
+    -webkit-transition: 0.5s linear;
+    -o-transition: 0.5s linear;
+    transition: 0.5s linear;
+}
+.social .fb:hover{
+	font-size: 52px;
+	    background-image: linear-gradient(to bottom, #53B9FE, #4fb1d7);
+}
+.social .tw:hover{
+	font-size: 52px;
+	background-image: linear-gradient(to bottom, #e38f71, #DB863D);
+}
+.fb{
+	background: #51b4db;
+	float: left;
+	background-image: linear-gradient(to bottom, #53b9e0, #4fb1d7);
+}
+.fa-facebook:before{
+	content: "\f09a";
+}
+.tw{
+	background: #de8a6c;
+	float: right;
+	background-image: linear-gradient(to bottom, #e38f71, #da8668);
+}
+.fa-twitter:before{
+	content: "\f099";
+}
+
+/* weather block styles */
+
+.weather{
+	margin-top: 15px;
+	position: relative;
+	padding: 30px;
+	background-color: rgba(255, 255, 255, 0.1);
+    background-image: url(../img/panel-box-noise-bg.png);
+    box-shadow: 0 1px 3px rgba(30, 50, 70, 0.3), inset 0 0 1px rgba(255, 255, 255, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.12);
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+.weather_now{
+	padding: 15px;
+	position: relative;
+}
+.weather_top,.weather_bottom{
+	display: inline-block;
+	position: relative;
+	color: #ffffff;
+	width: 48%;
+	text-align: center;
+}
+.weather_top{
+	line-height: 50px;
+    font-size: 50px;
+    height: 54px;
+
+}
+.weather_top:nth-child(2),.weather_top:nth-child(4){
+	float: right;
+}
+.fa-cloud:before{
+	content: "\f0c2";
+}
+
+/* weather bottom */
+
+.weather_bottom{
+	line-height: 24px;
+    font-size: 16px;
+    padding: 10px 0;
+    vertical-align: middle;
+}
+.day{
+	display: inline-block;
+	width: 15%;
+	color: #fff;
+	text-align: center;
+}
+.weather_week{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	padding: 15px 0;
+}
+.day i, .day span{
+	font-size: 1.1rem;
+	text-transform: capitalize;
+}
+.day .fa{
+	margin-bottom: 10px;
+}
+.fa-sun:before{
+	content: "\f185";
+}
+.fa-rain:before{
+	content: "\f0e9";
+}
+.fa-snow:before{
+	content: "\f0e9";
+}
+.fa-bolt:before{
+	content: "\f0e7";
+}
+
+			/* toor block styles */
+
 .toor_content{
 	padding: 30px;
 	background: #ffffff;
@@ -636,7 +822,7 @@ option{
 /* bottom content section styles */ 
 
 .content:nth-child(2){
-	margin-top: 15px;
+	margin-bottom: 15px;
 }
 .toor_image{
 	position: relative;
@@ -762,16 +948,6 @@ option{
 	color: #a8aeb6;
 }
 
-/* side bar styles */
-
-aside{
-	width: 30%;
-	display: inline-block;
-	float: right;
-	min-height: 1000px;
-	outline: 1px solid yellow; 
-}
-
 /* footer styles */
 
 footer{
@@ -807,7 +983,6 @@ footer a{
 }
 footer p{
 	margin-bottom: 15px;
-
 }
 
    

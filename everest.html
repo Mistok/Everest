@@ -5,9 +5,11 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="css/Everest.css">
+		<link rel="stylesheet" href="css/Everest_media.css">
 		<link rel="stylesheet" href="img\icons\font-awesome-4.7.0\css\font-awesome.min.css">
 		<link rel="stylesheet" type="text/css" href="slick/slick.css"/>
 		<link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+	
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript" ></script>
 		<script src="slick/slick.js" type="text/javascript" ></script>
 
@@ -18,15 +20,7 @@
 				});
 			});
 		</script>
-		<script type="text/javascript">
-			jQuery(document).ready(function($) {
-			$('figure').hover( 
-				function(){
-				$('.monochrome').toggleClass('un_visible');
-				});
-			});
-
-		</script>
+		
 	</head>
 	<body>
 		<div class="wrapper">
@@ -127,9 +121,77 @@
 				</div>
 			</section>
 			<section class="middle_section clearfix">
-				<aside class="right"></aside>
-				<div class="content">
+				<aside class="right">
+					<nav class="side_nav">
+						<ul>
+							<li>
+								<a href="#"><i class="fa fa-icon-plane"></i>Tickets</a>
+							</li>
+							<li>
+								<a href="#"><i class="fa fa-icon-phone"></i>Reservation</a>
+							</li>
+							<li>
+								<a href="#"><i class="fa fa-icon-check"></i>Check-in</a>
+							</li>
+							<li>
+								<a href="#"><i class="fa fa-icon-glass"></i>Events</a>
+							</li>
+							<li>
+								<a href="#"><i class="fa fa-icon-info-circle"></i>Information</a>
+							</li>
+						</ul>
+					</nav>
+					<div class="social clearfix">
+						<a href="https://www.facebook.com" class="fb">					<i class="fa fa-facebook"></i></a>
+						<a href="https://twitter.com" class="tw">
+							<i class="fa fa-twitter"></i></a>
+						</a>
+					</div>
+					<div class="weather">
+						<div class="weather_now">
+							<div class="weather_top">23°</div>
+							<div class="weather_top"><i class="fa fa-cloud"></i></div>
+							<div class="weather_bottom">Monday 27th</div>
+							<div class="weather_bottom">4mph / 7h</div>
+						</div>
+						<hr>
+						<div class="weather_week">
+							<div class="day">
+								<i class="fa fa-sun"></i>
+								<br>
+								<span>tue</span>
+							</div>
+							<div class="day">
+								<i class="fa fa-rain"></i>
+								<br>
+								<span>wed</span>
+							</div>
+							<div class="day">
+								<i class="fa fa-rain"></i>
+								<br>
+								<span>thu</span>
+							</div>
+							<div class="day">
+								<i class="fa fa-cloud"></i>
+								<br>
+								<span>fri</span>
+							</div>
+							<div class="day">
+								<i class="fa fa-sun"></i>
+								<br>
+								<span>sat</span>
+							</div>
+							<div class="day">
+								<i class="fa fa-bolt"></i>
+								<br>
+								<span>sun</span>
+							</div>
+						</div>
+					</div>
 
+				</aside>
+
+				<div class="content">
 					<div class="toor1">
 						<div class="toor_content">
 							<div class="teaser">
