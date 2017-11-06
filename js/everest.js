@@ -6,4 +6,3 @@ $('.sl').slick({
   fade: true,
   cssEase: 'linear'
 });
-		
