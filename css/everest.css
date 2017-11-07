@@ -138,7 +138,7 @@ p{
 
 /* main css */
 body{
-	background: #678ca6 url(../img/default_bg.jpg) 50% 0 fixed;
+	background: #678ca6 url(../img/default_bg.jpg) 50% 0% fixed;
     background-size: cover;
 }
 .wrapper{
@@ -513,6 +513,7 @@ option{
 .middle_section, .bottom_section{
 	margin-top: 15px;
 	min-height: 600px;
+	position: relative;
 }
 .content{
 	display: flex;
@@ -520,9 +521,10 @@ option{
 	width: 69%;
 	position: relative;
 	float: left;
-	/*outline: 1px solid green;*/
+	outline: 1px solid green;
+	margin-bottom: 15px;
 }
-.toor1, .toor2{
+.tour1, .tour2{
 	width: 48%;
 }
 
@@ -530,11 +532,10 @@ option{
 
 aside{
 	display: inline-block;
-	position: relative;
+	position: absolute;
 	width: 30%;
-	float: right;
-	min-height: 978px;
-	/*outline: 1px solid yellow; */
+	top: 0;
+	right: 0;
 }
 
 /* sidebar navigation */
@@ -706,9 +707,9 @@ aside{
 	content: "\f0e7";
 }
 
-			/* toor block styles */
+			/* tour block styles */
 
-.toor_content{
+.tour_content{
 	padding: 30px;
 	background: #ffffff;
     color: #5c626b;
@@ -723,18 +724,16 @@ aside{
     height: auto;
     box-sizing: border-box;
 }
-.toor_content h2{
-	font-family: ;
-}
-.toor_content hr{
+
+.tour_content hr{
 	margin: 15px 0 15px 0;
 }
-.toor_content p{
+.tour_content p{
 	margin-bottom: 30px;
 	line-height: 1.4rem;
 }
 
-/* toor icons styles */
+/* tour icons styles */
 
 .rate{
 	vertical-align: middle;
@@ -780,28 +779,36 @@ aside{
 /* prise block styles */
 
 .prise{
-	position: relative;
+	position: relative;	
 	height: 48px;
+	width: 100%;
 }
-.prise h2{
-	color: #da8668;
+.sub_prise{
+	position: relative;
 }
-.prise h2,.prise span,.prise a{
+.sub_prise h2{
 	display: inline-block;
 	float: left;
-	margin: auto 0;
+	color: #da8668;
 }
-.prise span{
+.sub_prise,.prise a{
+	display: inline-block;
 	position: absolute;
-    top: 50%;
-    transform: translateY(-45%);
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.sub_prise span{
+	display: inline-block;
+	float: left;
+	position: relative;
+   	white-space: nowrap;
     margin-left: 4px;
+    margin-top: 17px;
 }
 .prise a{
 	float: right;
 	position: relative;
-	top: 50%;
-    transform: translateY(-50%);
 	padding: 0 10px;
 	color: #ffffff;
     text-transform: none;
@@ -821,13 +828,10 @@ aside{
 
 /* bottom content section styles */ 
 
-.content:nth-child(2){
-	margin-bottom: 15px;
-}
-.toor_image{
+.tour_image{
 	position: relative;
 }
-.toor_image img{
+.tour_image img{
     max-width: 100%;
     height: auto;
     box-sizing: border-box;
@@ -903,7 +907,7 @@ aside{
 	display: none;
 	position: absolute;
 }
-.toor_content h4{
+.tour_content h4{
 	font-size: 1rem;
 	margin-bottom: 15px;
 }
@@ -945,6 +949,7 @@ aside{
 	font-size: 1.1rem;
 }
 .deal_prise span{
+	white-space: nowrap;
 	color: #a8aeb6;
 }
 
@@ -964,6 +969,9 @@ footer{
 }
 footer a{
 	color: #68c1e3;
+}
+footer a:hover{
+	color: #fff;
 }
 .footer_menu{
 	display: block;

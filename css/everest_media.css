@@ -1,0 +1,64 @@
+@media only screen and (max-device-width: 920px) {
+	/*body */
+	h1{
+		font-size: 1.8rem;
+		line-height: 2.1rem;
+	}
+	h2{
+		font-size: 1.3rem;
+		line-height: 1.6rem
+	}
+	/* tour prise */
+	.sub_prise span {    
+   	margin: 0px;
+   	position: absolute;
+    top: 1.5rem;
+    left: 0.5rem;
+}
+
+	/*weather block */
+
+	.day i, .day span {
+    font-size: 0.9rem;
+    text-transform: capitalize;
+
+}
+@media only screen and (max-device-width: 768px) {
+	/* top section */
+	.left_coll{
+		-webkit-box-shadow: none;
+		box-shadow: none;
+	}
+	.right_coll h2{
+		margin-bottom: 20px;
+	}
+	.left_coll, .right_coll{
+		display: block;
+		width: 100%;
+		float: none;
+	}
+	.icon_calendar,.calendar,.room_finder_container{
+		display: block;
+		width: 100%;
+	}
+	/*middle section */
+	
+	.content{
+		display: block;
+		width: 100%;
+	}
+	aside{
+		display: block;
+		position: static;
+		width: 100%;
+	}
+	.tour1,.tour2{
+		width: 100%;
+	}
+	.sub_prise span{
+		display: inline-block;
+		position: relative;
+		top: 0.4rem;
+    	left: 0.5rem;
+	}
+}
