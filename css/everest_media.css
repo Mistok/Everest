@@ -1,4 +1,4 @@
-@media only screen and (max-device-width: 920px) {
+@media only screen and (max-width: 920px) {
 	/*body */
 	h1{
 		font-size: 1.8rem;
@@ -8,7 +8,9 @@
 		font-size: 1.3rem;
 		line-height: 1.6rem
 	}
+
 	/* tour prise */
+
 	.sub_prise span {    
    	margin: 0px;
    	position: absolute;
@@ -23,8 +25,30 @@
     text-transform: capitalize;
 
 }
-@media only screen and (max-device-width: 768px) {
+@media only screen and (max-width: 768px) {
+
 	/* top section */
+	.main_menu ul{
+		position:fixed;
+		left: -41%;
+		top: 15%;
+		height: 80vh;
+		width: 38%;
+		flex-direction: column;
+		justify-content: left;
+		float: left;
+		margin-left: 15px;
+		margin-top: 5
+	}
+		.menu_list li:first-child{
+		display: block;
+	}
+	.hidden_menu_button{
+		display: inline-block;
+		left: 5%;
+		opacity: 1;
+	}
+
 	.left_coll{
 		-webkit-box-shadow: none;
 		box-shadow: none;
@@ -41,6 +65,10 @@
 		display: block;
 		width: 100%;
 	}
+	.input_container i:before {
+		left: 10px;
+	}
+
 	/*middle section */
 	
 	.content{

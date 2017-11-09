@@ -13,15 +13,17 @@
 		
 	</head>
 	<body>
+
 		<div class="wrapper">
 			<a href="#" class="logo"></a>
 			<nav class="main_menu clearfix">
-				<ul>
-					<li class="menu_item"><a href="#">Home</a></li>
-					<li class="menu_item"><a href="#">Features</a></li>
-					<li class="menu_item"><a href="#">Widgetkit</a></li>
-					<li class="menu_item"><a href="#">Icons</a></li>
-					<li class="menu_item"><a href="#">Zoo</a></li>
+				<ul id="menu_list" class="menu_list">
+					<li class="close"><i class="fa fa-times" aria-hidden="true"></i></li>
+					<li><a href="#">Home</a></li>
+					<li><a href="#">Features</a></li>
+					<li><a href="#">Widgetkit</a></li>
+					<li><a href="#">Icons</a></li>
+					<li><a href="#">Zoo</a></li>
 				</ul>
 				<div class="form_container">
 					<form class="search_form" method="post" action="">
@@ -29,6 +31,10 @@
 						<input type="text" class="search">	
 					</form>
 				</div>	
+				<div class="hidden_menu_button">
+					<div class="nav_line"></div>
+				</div>
+				<div class="hidden_menu"></div>
 			</nav>
 			<section class="top_section clearfix">
 				<div id="left_coll" class="left_coll">
@@ -111,8 +117,6 @@
 				</div>
 			</section>
 			<section class="middle_section clearfix">
-				
-
 				<div class="content">
 					<div class="tour1">
 						<div class="tour_content">
@@ -190,7 +194,7 @@
 							<h3>Join the Newsletter</h3>
 							<span>Sign up for the newsletter</span>
 							<form action="" class="signUp_form">
-								<input class="signUp_addres" type="text" value="Your E-Mail..">
+								<input class="signUp_addres" type="text" placeholder="Your E-Mail..">
 								<input class="signUp_addres_submit"type="submit" value="Sing Up">
 							</form>
 						</div>
@@ -364,6 +368,20 @@
  				format:'d.m.Y'
 			});
 
+		</script>
+		<script type="text/javascript">
+		jQuery(document).ready(function($) {
+			$('.hidden_menu_button').click(function(event) {
+				$('.wrapper,.hidden_menu,.menu_list').toggleClass('active');
+			});
+		});
+		</script>
+		<script type="text/javascript">
+		jQuery(document).ready(function($) {
+			$('.close').click(function(event) {
+				$('.wrapper,.hidden_menu,.menu_list').removeClass('active');
+			});
+		});
 		</script>
 	</body>
 	</html>
