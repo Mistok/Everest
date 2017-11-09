@@ -146,15 +146,21 @@ body{
 	padding: 0 15px;
 	max-width: 1024px;
 	margin: 0 auto;
-	left: 0;
+	overflow: hidden;
 	position: relative;
+	
+}
+.main_content{
+	display: inline-block;
+	width: inherit;
+	position: relative;
+	right: 0;
 	-webkit-transition: 0.6s ease-in-out ;
 	-o-transition: 0.6s ease-in-out ;
 	transition: 0.6s ease-in-out ;
 }
-.wrapper.active{
-	position: relative;
-	left: 40%;
+.main_content.active{
+	right: -42%;
 }
 .logo{
 	display: block;
@@ -168,6 +174,7 @@ body{
 
 .main_menu{
 	position: relative;
+	right: 0;
 	height: 90px;
 	margin: 0 auto;
 	margin-top: 15px;
@@ -177,6 +184,14 @@ body{
     background-image:  url(panel-box-noise-bg.png);
     -webkit-box-shadow: 0 1px 3px rgba(30, 50, 70, 0.3), inset 0 0 1px rgba(255, 255, 255, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.12);
     box-shadow: 0 1px 3px rgba(30, 50, 70, 0.3), inset 0 0 1px rgba(255, 255, 255, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.12);
+	-webkit-transition: 0.6s ease-in-out ;
+	-o-transition: 0.6s ease-in-out ;
+	transition: 0.6s ease-in-out ;
+}
+.main_menu.active{
+	position: relative;
+	right: -42%;
+	
 }
 .menu_list{
 	-webkit-transition: 0.6s ease-in-out ;
@@ -205,6 +220,7 @@ body{
 	cursor: pointer;
 	padding: 5px;
 	text-align: center;
+	margin-top: 0;
 }
 .fa-times{
 	position: relative;
@@ -247,16 +263,6 @@ body{
 }
 /* transform to hidden menu */
 
-.menu_list.active li{
-		margin-top: 15px;
-		max-height: auto;
-		background-image: url(../img/panel-box-noise-bg.png);
-    	box-shadow: 0 1px 3px rgba(30, 50, 70, 0.3), inset 0 0 1px rgba(255, 255, 255, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.12);
-	}
-.menu_list.active li a{
-		line-height: 60px;
-		height: auto;
-	}
 /* search block */
 
 .form_container{
@@ -271,7 +277,6 @@ body{
 	width: 30%;
 	transform: translateY(-50%);
 	padding-left: 30px;
-	
 }
 .search{
 	-webkit-appearance: none;
@@ -390,7 +395,7 @@ form:before{
 	background: rgba(66,121,189,0.5);
 }
 .hidden_menu{
-	display: inline-block;
+	display: none;
 	width: 40%;
 	height: 100%;
 	left: -41%;
@@ -402,7 +407,7 @@ form:before{
 }
 .hidden_menu.active,.menu_list.active{
 	left: 0;
-	top: 0;
+	top: 16.5%;
 }
 
 /* top section styles */
@@ -414,6 +419,7 @@ form:before{
 
 
 /* top section left collumn styles */
+
 #left_coll{
 	z-index: 1000;
 }
@@ -440,7 +446,6 @@ form:before{
 .sl.slick-initialized.slick-slider.slick-dotted"{
 	display: inline-block;
 	width: 30px;
-
 	top: 10px;
 	left: 10px;
 	flex-direction: column;
@@ -645,7 +650,7 @@ option{
 	width: 69%;
 	position: relative;
 	float: left;
-	outline: 1px solid green;
+	/*outline: 1px solid green;*/
 	margin-bottom: 15px;
 }
 .tour1, .tour2{
@@ -1116,5 +1121,3 @@ footer a:hover{
 footer p{
 	margin-bottom: 15px;
 }
-
-   
